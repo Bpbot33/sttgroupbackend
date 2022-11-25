@@ -1,6 +1,11 @@
 import express from "express";
 import characterRoutes from "./routes/characterRoutes";
+import connectDB from "./db";
+
 const app = express();
+
+connectDB();
+
 app.use(express.json());
 
 const PORT = 3000;
